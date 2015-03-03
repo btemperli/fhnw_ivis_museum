@@ -36,11 +36,11 @@ $(document).ready(function(){
                 var splitFilename = filename.split('.')[0].split('_');
                 $("#database").append(
                     $("<div class='database-person' style=background-image:url(" + dir + '/' + filename + ")>"
-                        + capitaliseFirstLetter(splitFilename[1]) + "<br />" + capitaliseFirstLetter(splitFilename[2])
+                        + capitaliseFirstLetter(filename)
                         + "</div>")
                 );
 
-                databaseImages[splitFilename[1] + '_' + splitFilename[2]] = dir + '/' + filename;
+                databaseImages[filename] = dir + '/' + filename;
             });
 
             initDatabaseTracker();
@@ -129,7 +129,7 @@ compareFaces = function () {
         $(faceResultImages[i]).removeClass().addClass('database-person').addClass('result-' + Math.round(comparePercents));
 
         if (comparePercents <= 3) {
-            $('#result').html('Erkannt: ' + capitaliseFirstLetter(index.split('_')[0]) + ' ' + capitaliseFirstLetter(index.split('_')[1]));
+            $('#result').html('Erkannt: ' + index);
         }
         i++;
     });
