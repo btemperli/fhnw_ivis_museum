@@ -64,6 +64,8 @@ initStartButton = function () {
 
     $startButton = $('#startButton');
     $startButton.click(function () {
+        $('body').addClass('running');
+        $startButton.remove();
         initFaceTracker();
     });
 };
@@ -101,6 +103,7 @@ function initImagesFinished ()
     });
 
     showStartButton();
+
 }
 
 /**
@@ -123,18 +126,41 @@ compareFaces = function () {
     var resultFace = $.parseJSON(jsonString);
     var resultFaceProportions = getFaceProportions(resultFace);
     var i = 0;
+    var found = false;
+    var interval;
 
     $.each(localstorageDatabase, function (index, item) {
         var comparePercents = compareProportions(resultFaceProportions, item);
-        $(faceResultImages[i]).removeClass().addClass('database-person').addClass('result-' + Math.round(comparePercents));
+        var $element = $(faceResultImages[i]);
+        $element.removeClass().addClass('database-person').addClass('result-' + Math.round(comparePercents));
 
         if (comparePercents <= 3) {
-            $('#result').html('Erkannt: ' + index);
+            var $result = $('#result');
+            $result.html('');
+            $element.clone().appendTo('#result');
+            $result.find('.database-person').html('');
+            $('.result-box').css('display','block');
+            found = true;
+            var count = 59;
+            var $counter = $('#counter');
+            $counter.html(60);
+            interval = setInterval(function () {
+                $counter.html(count);
+                count--;
+            }, 1000);
         }
         i++;
     });
 
-    window.startedAnalyse = false;
+    if (!found) {
+        window.startedAnalyse = false;
+    } else {
+        setTimeout(function() {
+            $('.result-box').css('display','none');
+            clearInterval(interval);
+            window.startedAnalyse = false;
+        }, 60000);
+    }
 
 };
 
