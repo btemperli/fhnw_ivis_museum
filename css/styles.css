@@ -4057,13 +4057,13 @@ select[multiple].input-lg, .form-group-lg .form-control {
 
 /* line 63, ../lib/bootstrap/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-primary {
-  color: #fff;
+  color: #fffec3;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
 /* line 11, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
-  color: #fff;
+  color: #fffec3;
   background-color: #286090;
   border-color: #204d74;
 }
@@ -4079,20 +4079,20 @@ select[multiple].input-lg, .form-group-lg .form-control {
 /* line 40, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary .badge {
   color: #337ab7;
-  background-color: #fff;
+  background-color: #fffec3;
 }
 
 /* line 67, ../lib/bootstrap/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-success {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  color: #fffec3;
+  background-color: #3b4b4f;
+  border-color: #303d40;
 }
 /* line 11, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+  color: #fffec3;
+  background-color: #252f32;
+  border-color: #161c1d;
 }
 /* line 21, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
@@ -4100,13 +4100,13 @@ select[multiple].input-lg, .form-group-lg .form-control {
 }
 /* line 29, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #3b4b4f;
+  border-color: #303d40;
 }
 /* line 40, ../lib/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success .badge {
-  color: #5cb85c;
-  background-color: #fff;
+  color: #3b4b4f;
+  background-color: #fffec3;
 }
 
 /* line 71, ../lib/bootstrap/assets/stylesheets/bootstrap/_buttons.scss */
@@ -4617,15 +4617,16 @@ input[type="button"].btn-block {
 /* line 6, ../sass/src/_base.scss */
 body {
   background-color: #e5e5e5;
+  color: #232626;
 }
 
-/* line 11, ../sass/src/_base.scss */
+/* line 12, ../sass/src/_base.scss */
 body.running #imageTracker,
 body.running #stats {
   display: none;
 }
 
-/* line 18, ../sass/src/_base.scss */
+/* line 19, ../sass/src/_base.scss */
 footer {
   display: none;
 }
@@ -4637,23 +4638,24 @@ footer {
 /* line 6, ../sass/src/_header.scss */
 header {
   height: 96px;
-  background-color: #cccccc;
+  background-color: #3b4b4f;
+  color: #fffec3;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 1000;
 }
-/* line 14, ../sass/src/_header.scss */
+/* line 15, ../sass/src/_header.scss */
 header h1 {
   margin-top: 26px;
 }
 
-/* line 19, ../sass/src/_header.scss */
+/* line 20, ../sass/src/_header.scss */
 body {
   margin-top: 120px;
 }
 
-/* line 24, ../sass/src/_header.scss */
+/* line 25, ../sass/src/_header.scss */
 footer {
   margin-top: 60px;
 }

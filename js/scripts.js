@@ -134,7 +134,7 @@ compareFaces = function () {
         var $element = $(faceResultImages[i]);
         $element.removeClass().addClass('database-person').addClass('result-' + Math.round(comparePercents));
 
-        if (comparePercents <= 3) {
+        if (comparePercents <= 5) {
             var $result = $('#result');
             $result.html('');
             $element.clone().appendTo('#result');
